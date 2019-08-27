@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+<!--     <constant name="struts.devMode" value="true" /> -->
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="com.internousdev.florida.action" extends="struts-default">
+
+	<action name="AddCartAction" class="com.internousdev.florida.action.AddCartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">systemError.html</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+	<action name="CartAction" class="com.internousdev.florida.action.CartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+	<action name="CreateDestinationAction" class="com.internousdev.florida.action.CreateDestinationAction" method="execute">
+		<result name="success">createDestination.jsp</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+	<action name="CreateDestinationCompleteAction" class="com.internousdev.florida.action.CreateDestinationCompleteAction" method="execute">
+		<result name="success">createDestinationComplete.jsp</result>
+		<result name="error">systemError.html</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+	<action name="CreateDestinationConfirmAction" class="com.internousdev.florida.action.CreateDestinationConfirmAction" method="execute">
+		<result name="success">createDestinationConfirm.jsp</result>
+		<result name="error">createDestination.jsp</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+	<action name="CreateUserAction" class="com.internousdev.florida.action.CreateUserAction" method="execute">
+		<result name="success">createUser.jsp</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+    <action name="CreateUserCompleteAction" class="com.internousdev.florida.action.CreateUserCompleteAction" method="execute">
+		<result name="success">createUserComplete.jsp</result>
+		<result name="error">systemError.html</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+    <action name="CreateUserConfirmAction" class="com.internousdev.florida.action.CreateUserConfirmAction" method="execute">
+		<result name="success">createUserConfirm.jsp</result>
+		<result name="error">createUser.jsp</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+  <action name="DeleteCartAction" class="com.internousdev.florida.action.DeleteCartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">systemError.html</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+	  <action name="DeleteDestinationAction" class="com.internousdev.florida.action.DeleteDestinationAction" method="execute">
+		<result name="success">settlementConfirm.jsp</result>
+		<result name="error">systemError.html</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+  <action name="DeletePurchaseHistoryAction" class="com.internousdev.florida.action.DeletePurchaseHistoryAction" method="execute">
+		<result name="success">purchaseHistory.jsp</result>
+		<result name="error">systemError.html</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+  <action name="GoLoginAction" class="com.internousdev.florida.action.GoLoginAction" method="execute">
+		<result name="success">login.jsp</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+   <action name="HomeAction" class="com.internousdev.florida.action.HomeAction" method="execute">
+		<result name="success">home.jsp</result>
+	</action>
+
+    <action name="LoginAction" class="com.internousdev.florida.action.LoginAction" method="execute">
+		<result name="success">home.jsp</result>
+		<result name="cart">cart.jsp</result>
+		<result name="error">login.jsp</result>
+		<result name="DBError">systemError.html</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+	<action name="LogoutAction" class="com.internousdev.florida.action.LogoutAction" method="execute">
+		<result name="success">index.jsp</result>
+	</action>
+
+	<action name="MyPageAction" class="com.internousdev.florida.action.MyPageAction" method="execute">
+		<result name="success">mypage.jsp</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+		<result name="error">systemError.html</result>
+	</action>
+
+   <action name="ProductDetailsAction" class="com.internousdev.florida.action.ProductDetailsAction" method="execute">
+		<result name="success">productDetails.jsp</result>
+	</action>
+
+   <action name="ProductListAction" class="com.internousdev.florida.action.ProductListAction" method="execute">
+		<result name="success">productList.jsp</result>
+	</action>
+
+	<action name="PurchaseHistoryAction" class="com.internousdev.florida.action.PurchaseHistoryAction" method="execute">
+		<result name="success">purchaseHistory.jsp</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+	<action name="ResetPasswordAction" class="com.internousdev.florida.action.ResetPasswordAction" method="execute">
+		<result name="success">resetPassword.jsp</result>
+	</action>
+
+	<action name="ResetPasswordCompleteAction" class="com.internousdev.florida.action.ResetPasswordCompleteAction" method="execute">
+		<result name="success">resetPasswordComplete.jsp</result>
+		<result name="error">systemError.html</result>
+	</action>
+
+	<action name="ResetPasswordConfirmAction" class="com.internousdev.florida.action.ResetPasswordConfirmAction" method="execute">
+		<result name="success">resetPasswordConfirm.jsp</result>
+		<result name="error">resetPassword.jsp</result>
+	</action>
+
+   <action name="SearchItemAction" class="com.internousdev.florida.action.SearchItemAction" method="execute">
+		<result name="success">productList.jsp</result>
+	</action>
+
+   <action name="SettlementCompleteAction" class="com.internousdev.florida.action.SettlementCompleteAction" method="execute">
+		<result name="success">settlementComplete.jsp</result>
+		<result name="error">systemError.html</result>
+		<result name="sessionTimeout">sessionError.jsp</result>
+	</action>
+
+   <action name="SettlementConfirmAction" class="com.internousdev.florida.action.SettlementConfirmAction" method="execute">
+		<result name="success">settlementConfirm.jsp</result>
+		<result name="login">login.jsp</result>
+		<result name="error">systemError.html</result>
+	</action>
+</package>
+</struts>

@@ -1,0 +1,13 @@
+table.product-list-table,td {
+	width:33.3%;
+	height: 300px;
+	text-align:center;
+}
+
+table.product-list-table,tr{
+	margin : 3%;
+	width : 90%
+}
+.item-image-box {
+	height : 80%;
+}
